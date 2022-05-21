@@ -37,7 +37,7 @@ section.main {
   padding: 1.7rem 0;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--color-grey);
+  /* background-color: var(--color-grey); */
 }
 
 .padding-lr {
@@ -103,6 +103,7 @@ section.main {
   align-items: center;
   position: relative;
   justify-content: space-between;
+  background-color: var(--color-grey);
 }
 
 .left {
@@ -178,7 +179,7 @@ section.main {
 
   position: absolute;
   border-radius: 10px;
-  background-color: var(--color-white);
+  /* background-color: var(--color-white); */
   /* box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.2); */
 }
 
@@ -272,6 +273,9 @@ section.main {
   margin-top: 6rem;
   text-align: center;
   margin-bottom: 4rem;
+  background-color: var(--color-grey);
+  padding-top: 4rem;
+  padding-bottom: 2rem;
 }
 
 .explore h2 {
@@ -342,6 +346,9 @@ section.main {
   text-align: center;
   margin-top: 6rem;
   margin-bottom: 6rem;
+  background-color: var(--color-grey);
+  padding-top: 2rem;
+  padding-bottom: 3rem;
 }
 
 .video h2 {
@@ -365,7 +372,7 @@ section.main {
 }
 
 .footer {
-  padding-top: 4rem;
+  padding-top: 2rem;
   padding-bottom: 6rem;
 }
 
