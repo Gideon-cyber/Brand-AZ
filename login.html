@@ -12,11 +12,12 @@
     />
     <link rel="stylesheet" href="/css/SignUp.css" />
     <title>Sign Up</title>
+    <script defer src="/js/login.js"></script>
   </head>
   <body>
     <header class="header">
       <div class="logo">
-        <a href="#">
+        <a href="">
           <img src="/images/HashRank.svg" alt="logo" />
         </a>
       </div>
@@ -38,7 +39,7 @@
         <p>Nice to see you back</p>
       </div>
       <div class="form">
-        <form action="">
+        <form action="/checkout.html" class="loginForm">
           <input
             type="email"
             id="email"
@@ -53,6 +54,7 @@
             name="password"
             required
           />
+          <span class="error-message"></span>
           <button type="submit">Sign In</button>
         </form>
       </div>

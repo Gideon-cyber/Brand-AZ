@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Irish+Grover&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/checkout.css" />
+    <title>HashRank</title>
+    <script defer src="/js/loginAuth.js"></script>
+    <script defer src="/init.js"></script>
+    <!-- <script defer src="/js/credo.js"></script>  -->
+  </head>
+  <body>
+    <section class="main">
+      <header class="header padding-lr">
+        <div class="logo">
+          <a href="/index.html">
+            <img src="/images/HashRank.svg" alt="logo" />
+          </a>
+        </div>
+        <div class="menu">
+          <ul>
+            <li><a href="" class="active">Pricing</a></li>
+            <li><a href="">Resources</a></li>
+            <li><a href="">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="cta">
+          <a href="login.html" class="btn">Sign in</a>
+          <a href="SignUp.html" class="btn button">Start free trial</a>
+        </div>
+      </header>
+      <div class="hero padding-lr">
+        <div class="checkout">
+          <h1>Try HashRank for free</h1>
+          <p>Join over 1200 brands, creators and marketers</p>
+
+          <div class="checkout_grid">
+            <div class="plan">
+              <div class="plan_text">
+                <div>
+                  <h3>Solo (yearly)</h3>
+                  <p>Everything you need to get started with hashtags</p>
+                </div>
+              </div>
+              <div class="plan_text2">
+                <a href="">Change plan</a>
+              </div>
+            </div>
+            <div class="product">
+              <div class="product_texts">
+                <div class="total flex">
+                    <h4>Product</h1>
+                    <p>Year total</p>
+                </div>
+                <div class="hashRank flex">
+                    <h5>HashRank Yearly</h5>
+                    <p>$0.00</p>
+                </div>
+                <hr>
+                <div class="due flex">
+                    <h4>Due today</h4>
+                    <p>$0.00</p>
+                </div>
+                <div class="start">
+                    <a href="" class="button" id="btn" onclick="makePayment()">Start 3 day free trial</a>
+                </div>
+                <div class="notice">
+                    <p>
+
+                        By clicking ‘Start my free trial’, you agree to our refund policy’. You will be automatically charged for your subscriptions at the end of the trial period, then your subscription will automatically renew until you cancel
+                    </p>
+                </div>
+              </div>
+            </div>
+            <div class="credo">
+              <img src="/images/Credologo.png" alt="credo">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+
+const generateRandomNumber = (min, max) =>
+    Math.floor(Math.random() * (max - min) + min);
+
+  const transRef = `iG27f${generateRandomNumber(
+    10,
+    60
+  )}hvc${generateRandomNumber(10, 90)}`;
+  console.log(transRef);
+
+  function makePayment() {
+    CredoCheckout({
+      transRef, //Please generate your own transRef that is unique for each transaction
+      amount: 1000,
+      redirectUrl: "/pricing.html",
+      paymentOptions: ["CARDS", "BANK"],
+      currency: "NGN",
+      customerName: "Ciroma Chukwuma Adekunle",
+      customerEmail: "cirochwukunle@example.com",
+      customerPhoneNo: "08032698425",
+      onClose: function () {
+        console.log("Modal closed");
+      },
+      callback: function () {
+        console.log("Payment Successful");
+      },
+      publicKey: "pk_demo-qhuHZyFwf4Qgu6NNjhitZaJx8Z44wu.SNuihBvIZd-u", // You should store your API key as an environment variable
+    });
+  }
+
+
+      // const api_url = 'https://api.credocentral.com/credo-payment/v1';
+      // async function getData() {
+      //   const response = await fetch(api_url).then;
+      //   const data = await response.json()
+      //   console.log(data);
+      // }
+
+      // getData();
+
+      
+    </script>
+
+  </body>
+</html>
